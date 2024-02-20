@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        .card-img-overlay{
+            background-color: rgba(0,0,0,0.5);
+        } 
+        .card > img{
+            max-height: 150px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid container">
+            <a class="navbar-brand" href="/Cards.html">Bootstrap - Cards</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#Cards">Cards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#carouselExampleIndicators">Carrocel</a>
+                    </li>
+                    <div class="btn-group">
+                        <button class="btn btn-primary">
+                            Cadastrar
+                        </button>
+                        <button class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li class="dropdown-item">
+                                <a href="">Novo Usuario</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="">Novo Fornecedor</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="">Novo Funcionario</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="nav-item">
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exemplo-modal">
+                            Ver Detalhes
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal de Inicio -->
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Título da modal -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Bem-vindo à Minha Página</h5>
+                    <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                </div>
+
+                <!-- Corpo da modal -->
+                <div class="modal-body">
+                    <p>Olá! Bem-vindo à minha página. Sou muito feliz em tê-lo(a) aqui. Espero que você goste do conteúdo que preparei para você. Sinta-se à vontade para explorar e conhecer mais sobre o que tenho a oferecer.</p>
+                </div>
+
+                <!-- Rodapé da modal -->
+                <div class="modal-footer">
+                    <button data-bs-dismiss="modal" class="btn btn-danger">Cancelar</button>
+                    <button data-bs-dismiss="modal" class="btn btn-success">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrossel de Imagens -->
+    <div class="container">
+        <div id="carousel-exemplo" class="carousel carousel-fade slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div data-bs-interval="1000" class="carousel-item active">
+                    <img class="d-block w-100" src="./Imagens/cervin-971230_1280.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Foto de um animal</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="1000" class="carousel-item">
+                    <img class="d-block w-100" src="./Imagens/hanam-city-219140_1280.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Foto de uma paisagem</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="1000" class="carousel-item">
+                    <img class="d-block w-100" src="./Imagens/sunset-176603_1280.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Foto de yoga</h2>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+    <!-- Card com layout -->
+    <div class="container mt-5">
+        <div class="row" id="Cards">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="./Imagens/bin-3226301_1280.jpg" class="card-img-top" alt="Imagem do Card">
+                    <div class="card-body">
+                        <h5 class="card-title">Título do Card</h5>
+                        <p class="card-text">Texto do Card. Aqui você pode inserir o conteúdo do seu card.</p>
+                        <a href="#" class="btn btn-primary">Botão do Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="./Imagens/matterhorn-2921923_1280.jpg" class="card-img-top" alt="Imagem do Card">
+                    <div class="card-body">
+                        <h5 class="card-title">Título do Card</h5>
+                        <p class="card-text">Texto do Card. Aqui você pode inserir o conteúdo do seu card.</p>
+                        <a href="#" class="btn btn-primary">Botão do Card</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card">
+                    <img src="./Imagens/nature-3329096_1280.jpg" class="card-img-top" alt="Imagem do Card">
+                    <div class="card-body">
+                        <h5 class="card-title">Título do Card</h5>
+                        <p class="card-text">Texto do Card. Aqui você pode inserir o conteúdo do seu card.</p>
+                        <a href="#" class="btn btn-primary">Botão do Card</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            setTimeout(function() {
+                modalExemplo.show();
+            }, 3000);
+        })
+    </script>
+</body>
+</html>
